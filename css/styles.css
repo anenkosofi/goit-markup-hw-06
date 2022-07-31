@@ -756,15 +756,22 @@ img {
     height: 15px;
     border: 2px solid var(--additional-primary-text-color);
     border-radius: 4px;
-    fill: var(--additional-secondary-text-color);
+    background-color: transparent;
 
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox-input:checked + .icon-checkbox {
     border-color: var(--accent);
-    fill: var(--accent);
     background-color: var(--accent);
+}
+.yes-check {
+    opacity: 0;
+
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.checkbox-input:checked +.icon-checkbox > .yes-check {
+    opacity: 1;
 }
 
 .agreement-field:focus-within .icon-checkbox {
