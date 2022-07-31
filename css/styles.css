@@ -762,8 +762,9 @@ img {
 }
 
 .checkbox-input:checked + .icon-checkbox {
-    border-color: transparent;
+    border-color: var(--accent);
     fill: var(--accent);
+    background-color: var(--accent);
 }
 
 .agreement-field:focus-within .icon-checkbox {
